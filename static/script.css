@@ -1,0 +1,15 @@
+.task-card {
+    animation: fadeIn 0.5s ease-in;
+}
+.task-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.task-card.dragging {
+    opacity: 0.5;
+    border: 2px dashed #3b82f6;
+}

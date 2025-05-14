@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2 class="text-xl font-semibold mb-4 dark:text-white">Edit Task</h2>
+    <form method="POST" class="max-w-lg mx-auto bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
+        <div class="mb-4">
+            <label class="block text-gray-700 dark:text-gray-300">Title</label>
+            <input type="text" name="title" value="{{ task.title }}" required class="w-full p-2 border rounded dark:bg-gray-700 dark:text-white">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 dark:text-gray-300">Description</label>
+            <textarea name="description" class="w-full p-2 border rounded dark:bg-gray-700 dark:text-white">{{ task.description }}</textarea>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 dark:text-gray-300">Status</label>
+            <select name="status" class="w-full p-2 border rounded dark:bg-gray-700 dark:text-white">
+                <option value="Pending" {% if task.status == 'Pending' %}selected{% endif %}>Pending</option>
+                <option value="Completed" {% if task.status == 'Completed' %}selected{% endif %}>Completed</option>
+            </select>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Update Task</button>
+    </form>
+{% endblock %}
