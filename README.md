@@ -96,7 +96,6 @@ A lightweight full-stack **Task Management** web application built with **Flask*
 ## 🧑‍💻 Author
 
 **Nayan Das**  
-📧 [nayan271997@gmail.com](mailto:nayan271997@gmail.com)  
 🔗 [GitHub](https://github.com/onlynayan)  
 🔗 [Portfolio](https://onlynayan.github.io/portfolio)
 
